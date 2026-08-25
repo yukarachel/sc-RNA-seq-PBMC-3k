@@ -14,3 +14,6 @@ __pycache__/
 # Conda environments
 .env
 .venv/
+
+# anndata files
+*.h5ad

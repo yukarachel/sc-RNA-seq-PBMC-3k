@@ -2,35 +2,24 @@
 
 ## Overview
 
-This project analyzes the **PBMC 3k single-cell RNA-seq dataset** to identify immune-cell populations and develop a machine-learning model for cell-type classification.
-
+This project analyzes the **PBMC 3k single-cell RNA-seq dataset** to identify immune-cell populations and develop linear and non-linear machine learning models for cell-type classification.
 The project combines single-cell bioinformatics with supervised and unsupervised machine learning.
 
 ### Workflow
 
-Gene expression data  
-↓  
-Quality control & normalization  
-↓  
-PCA  
-↓  
-Cell-cell neighborhood graph  
-↓  
-Leiden clustering  
-↓  
-Marker-gene analysis & cell-type annotation  
-↓  
-Logistic regression classification  
+1. Gene expression data
+2. Quality control & normalization
+3. PCA
+4. Cell to cell neighborhood graph
+5. Leiden clustering
+6. Marker-gene analysis & cell-type annotation
+7. Logistic regression classification  
 
 ## Biological Question
 
 Can gene-expression profiles be used to distinguish different immune-cell populations?
 
-A secondary machine-learning question is:
-
-> How much classification information is retained when thousands of gene-expression features are reduced to a smaller number of principal components?
-
----
+A secondary machine-learning question is: What number of principle components is ideal for the model to reduce to? Can we find marker genes using a supervised linear model?
 
 ## Dataset
 
@@ -74,9 +63,7 @@ This graph represents which cells have similar gene-expression profiles.
 
 ### 5. UMAP
 
-UMAP was used to visualize the cell-cell neighborhood structure in two dimensions.
-
-UMAP was used for visualization rather than determining the cell-type labels.
+UMAP was used to visualize the cell-cell neighborhood structure in two dimensions, and for visualization purposes.
 
 ### 6. Leiden Clustering
 
@@ -98,14 +85,8 @@ Examples include:
 | 9 | LST1, FCGR3A, FCER1G | FCGR3A+ monocytes |
 | 12 | TUBB1, PF4, GNG11 | Megakaryocytes |
 
----
-
 # Machine Learning
-
-## Cell-Type Classification
-
-After identifying and annotating cell populations, the cluster-derived cell-type labels were used as targets for supervised machine learning.
-
-```text
-X = gene-expression features
-y = cell type
+Model 1: Logistic regression using 1987 genes as features
+Model 2: Logistic regression using 50 principle components as features
+Model 3: Logistic regression using 10 principle components as features (best performing, 99% accuracy)
+Model 4: Random forest using 10 principle components as features

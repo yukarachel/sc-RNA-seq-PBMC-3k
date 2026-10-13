@@ -85,12 +85,13 @@ Examples include:
 | 8 | NKG7, GNLY, GZMB, PRF1 | NK cells |
 | 9 | LST1, FCGR3A, FCER1G | FCGR3A+ monocytes |
 | 12 | TUBB1, PF4, GNG11 | Megakaryocytes |
+
 ![Alt Text](figures/rankgene.png)
 
 # Machine Learning
-Model 1: Logistic regression using 1987 genes as features
-Model 2: Logistic regression using 50 principle components as features
-Model 3: Logistic regression using 10 principle components as features (best performing, 99% accuracy)
-Model 4: Random forest using 10 principle components as features
+- Model 1: Logistic regression using 1987 genes as features
+- Model 2: Logistic regression using 50 principle components as features
+- Model 3: Logistic regression using 10 principle components as features (best performing, 99% accuracy)
+- Model 4: Random forest using 10 principle components as features
 
 ![Alt Text](figures/modelcomp.png)

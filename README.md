@@ -19,7 +19,7 @@ The project combines single-cell bioinformatics with supervised and unsupervised
 
 Can gene-expression profiles be used to distinguish different immune-cell populations?
 
-A secondary machine-learning question is: What number of principle components is ideal for the model to reduce to? Can we find marker genes using a supervised linear model?
+A secondary machine-learning question is: What number of principal components is ideal for the model to reduce to? Can we find marker genes using a supervised linear model?
 
 ## Dataset
 
@@ -90,8 +90,8 @@ Examples include:
 
 # Machine Learning
 - Model 1: Logistic regression using 1987 genes as features
-- Model 2: Logistic regression using 50 principle components as features
-- Model 3: Logistic regression using 10 principle components as features (best performing, 99% accuracy)
-- Model 4: Random forest using 10 principle components as features
+- Model 2: Logistic regression using 50 principal components as features
+- Model 3: Logistic regression using 10 principal components as features (best performing, 99% accuracy)
+- Model 4: Random forest using 10 principal components as features
 
 ![Alt Text](figures/modelcomp.png)
